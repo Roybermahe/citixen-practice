@@ -1,0 +1,28 @@
+<form (ngSubmit)="form.form.valid && onSubmit()" #form="ngForm" >
+    <h1 mat-dialog-title>{{data == null ? 'New Task' : 'Task'}}</h1>
+    <div mat-dialog-content>
+        <mat-form-field appearance="fill">
+            <mat-label>Title task</mat-label>
+            <input name="title" [(ngModel)]="task.title" matInput required>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Description task</mat-label>
+            <textarea name="description" [(ngModel)]="task.description" matInput required rows="10"
+                cols="10"></textarea>
+        </mat-form-field>
+        <div *ngIf="data == null">
+            <p>Color task</p>
+            <button mat-mini-fab *ngFor="let item of listColor" class="mat-mini-fab {{item}}"
+                [ngClass]="{selected: task.color === item }" type="button" (click)="changeColor(item)"></button>
+            <br><br>
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <button type="submit" *ngIf="data == null" mat-button mat-dialog-close>CONFIRM YOUR TASK</button>
+        <div *ngIf="data != null && data.edit == true">
+            <button type="button" mat-button mat-dialog-close color="primary" (click)="deleteTask()">DELETE </button>
+            <button type="button" mat-button mat-dialog-close color="primary" (click)="editTask()">EDIT</button>
+            <button type="submit" mat-button [mat-dialog-close]="true" cdkFocusInitial>COMPLETED</button>
+        </div> 
+    </div>
+</form>

@@ -1,0 +1,20 @@
+<div class="tasks">
+    <div>
+    <mat-card class="new-task" (click)="createTask()">
+        <mat-card-content>
+            <i class="material-icons">add</i>
+            <p>New Task</p>
+        </mat-card-content>
+    </mat-card>
+    </div>
+    <ng-container *ngFor="let item of listTask; index as i">
+        <div *ngIf="item.state == false" (click)="editTask(item, i)">
+            <app-task [task]="item" ></app-task>
+        </div>
+    </ng-container>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

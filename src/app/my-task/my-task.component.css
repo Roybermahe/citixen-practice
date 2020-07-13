@@ -1,0 +1,10 @@
+.new-task {
+    background-color: white;
+    box-shadow: none;
+    text-align: center;
+    width: 200px;
+    min-width: auto;
+    max-width: 200px;
+    height: 80px;
+    cursor: pointer;
+}

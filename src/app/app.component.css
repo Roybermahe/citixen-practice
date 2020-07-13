@@ -1,0 +1,12 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.sidenav,.content, .toolbar {
+    background-color: white;
+}
+
+.content {
+    width: 90%;
+    margin: auto;
+}

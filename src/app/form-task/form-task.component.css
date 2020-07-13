@@ -1,0 +1,23 @@
+.blue { background-color: #B1FFFF; } 
+
+.red{ background-color: #FFC9B1;}
+
+.yellow{ background-color: #FFF7B1;}
+
+.green{ background-color: #B3FFB1;} 
+
+.purple{ background-color: #FFB1FC;}
+
+.none{ background-color: #F0F0F0;}
+
+.mat-mini-fab {
+    box-shadow: none;
+    margin: 2px;
+    
+}
+
+.selected {
+    border-width: 1px;
+    border-style: solid;
+    border-color: dimgray;
+}

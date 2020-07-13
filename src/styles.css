@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-card {
+    box-shadow: 0;
+}
+
+mat-form-field  {
+    width: 100%;
+}
+
+mat-mini-fab {
+    box-shadow: none;
+    margin: 2px;
+    
+}
+
+.blue { background-color: #B1FFFF; } 
+
+.red{ background-color: #FFC9B1;}
+
+.yellow{ background-color: #FFF7B1;}
+
+.green{ background-color: #B3FFB1;} 
+
+.purple{ background-color: #FFB1FC;}
+
+.none{ background-color: #F0F0F0;}
+
+.tasks {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    height: auto;
+  }
+  
+  @media (min-width: 600px) {
+      .tasks { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  @media (min-width: 780px) {
+      .tasks { grid-template-columns: repeat(4, 1fr); }
+  }

@@ -1,0 +1,24 @@
+<div class="tasks">
+    <ng-container *ngFor="let item of listTask">
+        <div>
+            <app-task [task]="item"></app-task>
+        </div>
+    </ng-container>
+</div>
+<br><br>
+<div class="tapHere" *ngIf="listTask.length > 0" >
+    <button mat-button (click)="removeAll()" width="auto">
+    <span class="material-icons">
+        delete_forever
+    </span>
+    <p>Tap here to delete all tasks</p>
+    </button>
+</div>
+<div class="list-clear" *ngIf="listTask.length === 0">
+    <br>
+    <span class="material-icons">
+        delete_outline
+    </span>
+    <h2>List clear</h2>
+    <br>
+</div>

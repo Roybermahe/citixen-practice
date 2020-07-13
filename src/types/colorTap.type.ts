@@ -1,0 +1,1 @@
+export type colorTap = 'blue' | 'red' | 'yellow' | 'green' | 'purple' | 'none';

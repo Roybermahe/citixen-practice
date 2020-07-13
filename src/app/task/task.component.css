@@ -1,0 +1,7 @@
+.card {
+    min-width: 5px;
+    max-width: 200px;
+    cursor: pointer;
+}
+
+p { word-break: break-all }
