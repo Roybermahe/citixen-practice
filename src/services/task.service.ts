@@ -9,9 +9,9 @@ export class TaskService {
 
   private _tasks = new BehaviorSubject<task[]>([]);
   private dataStore: { tasks: task[] } = { tasks: [] };
-  readonly listTasks =  this._tasks.asObservable();
+  readonly listTasks = this._tasks.asObservable();
   constructor(
-  
+
   ) { }
 
   get listTask() {
@@ -31,7 +31,7 @@ export class TaskService {
   }
 
   public removeTask(index: number) {
-    this.dataStore.tasks.splice(index,1);
+    this.dataStore.tasks.splice(index, 1);
     this.updateList();
   }
 
@@ -39,6 +39,7 @@ export class TaskService {
     this.dataStore.tasks = this.dataStore.tasks.filter(item => item.state != true);
     this.updateList();
   }
+  
   private updateList() {
     this._tasks.next(Object.assign({}, this.dataStore).tasks);
     localStorage.setItem('task', JSON.stringify(this.dataStore.tasks));
